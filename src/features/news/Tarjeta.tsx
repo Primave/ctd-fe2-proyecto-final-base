@@ -10,10 +10,10 @@ import {
 } from "./styled";
 import { Modal } from "./Modal";
 
-export interface ITarjeta {
+/* export interface ITarjeta {
   noticias: INoticiasNormalizadas[];
   handelClick: (n: INoticiasNormalizadas) => void;
-}
+} */
 
 /**
  *Componente para mostrar noticias de los Simpsons.
@@ -36,6 +36,7 @@ const Tarjeta = () => {
           <BotonLectura onClick={() => setModal(n)}>Ver más</BotonLectura>
         </TarjetaNoticia>
       ))}
+       <Modal setModal={setModal} modal={modal}/>
     </>
   );
 };
