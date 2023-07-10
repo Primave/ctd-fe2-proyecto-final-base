@@ -6,6 +6,7 @@ import { toFront } from "./noticias.mapper";
 import Tarjeta from "./Tarjeta";
 import ModalDestaque from "./ModalDestaque";
 import ModalSecundario from "./ModalSecundario";
+import ModalPrimario from "./ModalDestaque";
 
 /**
  *Componente para mostrar noticias de los Simpsons
@@ -33,7 +34,7 @@ const Noticias = () => {
         />
       );
     }
-    return <ModalDestaque {...modal} onClose={() => setModal(null)} />;
+    return <ModalPrimario {...modal} onClose={() => setModal(null)} />;
   }, [modal]);
 
   useEffect(() => {

@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { NombresSimpsons, INFO_SIMPSONS } from "./constants";
 import { BioContainer,
   BioDescripcion,

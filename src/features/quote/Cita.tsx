@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { shallowEqual } from "react-redux";
 import { Boton, Input, AutorCita, ContenedorCita, TextoCita } from "./styled";
 import { useAppSelector, useAppDispatch } from "../../app/hooks";

@@ -15,10 +15,6 @@ export interface ITarjeta {
   handelClick: (n: INoticiasNormalizadas) => void;
 }
 
-/**
- *Componente para mostrar noticias de los Simpsons.
- * @returns {JSX.Element} - Elemento JSX que incluye el listado de las noticias e incluye logica para mostrar distintos modales.
- */
 
 const Tarjeta = ({ noticias, handelClick }: ITarjeta) => {
   return (

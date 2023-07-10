@@ -10,7 +10,7 @@ import {
 } from "./styled";
 import { CloseButton as Close } from "../../assets";
 
-interface IModalDestaqueProps {
+interface IModalPrimarioProps {
   onClose: () => void;
   imagen: string;
   titulo: string;
@@ -18,22 +18,22 @@ interface IModalDestaqueProps {
 }
 
 /**
- * componente para mostrar el modal premium
+ * componente del modal primario
  * @param {Object} props
  * @param {string} props.image - URL de la imagen del personaje.
  * @param {string} props.titulo - Titulo de la noticia.
  * @param {string} props.descripcion - Descripción de la noticia.
  * @param {funtion} props.onClose - Manejador de cierre del modal.
- * @returns {JSX.Element} - Elemento JSX del modal premium.
+ * @returns {JSX.Element} - Elemento JSX del modal primario.
  */
 
 
-const ModalDestaque = ({
+const ModalPrimario = ({
   onClose,
   imagen,
   titulo,
   descripcion,
-}: IModalDestaqueProps) => {
+}: IModalPrimarioProps) => {
   return (
     <ContenedorModal data-testid="modal">
       <TarjetaModal>
@@ -50,4 +50,4 @@ const ModalDestaque = ({
   );
 };
 
-export default ModalDestaque;
+export default ModalPrimario;

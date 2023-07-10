@@ -9,6 +9,7 @@ export interface EstadoCita {
   estado: ESTADO_FETCH;
 }
 
+
 const initialState: EstadoCita = {
   data: null,
   estado: ESTADO_FETCH.INACTIVO,

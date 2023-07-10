@@ -17,11 +17,11 @@ interface IModalSecundarioProps {
 }
 
 /**
- * componente para mostrar el modal de subscripción
+ * componente del modal de Secundario de subscripción
  * @param {Object} props
- * @param {funtion} props.onClose - Manejador de cierre del modal.
- * @param {funtion} props.onSubscription - Manejador de suscripción.
- * @returns {JSX.Element} - Elemento JSX del modal de suscripción.
+ * @param {funtion} props.onClose - Manejador de cierre del modal en el modal secundario.
+ * @param {funtion} props.onSubscription - Es el manejador de suscripción en el modal secundario.
+ * @returns {JSX.Element} - Elemento JSX del modal de secundario.
  */
 
 const ModalSecundario = ({
