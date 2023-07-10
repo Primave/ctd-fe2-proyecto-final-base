@@ -1,4 +1,4 @@
-import { useState } from "react";
+import React, { useState } from "react";
 import { INoticiasNormalizadas, useNoticias } from "../../hook/useNoticias";
 import {
     TarjetaNoticia,
@@ -8,21 +8,19 @@ import {
     TituloTarjetaNoticia,
     BotonLectura,
 } from "./styled";
-import { Modal } from "./Modal";
 
-/* export interface ITarjeta {
+
+export interface ITarjeta {
   noticias: INoticiasNormalizadas[];
   handelClick: (n: INoticiasNormalizadas) => void;
-} */
+}
 
 /**
  *Componente para mostrar noticias de los Simpsons.
  * @returns {JSX.Element} - Elemento JSX que incluye el listado de las noticias e incluye logica para mostrar distintos modales.
  */
 
-const Tarjeta = () => {
-  const noticias = useNoticias();
-  const [modal, setModal] = useState<INoticiasNormalizadas | null>(null);  
+const Tarjeta = ({ noticias, handelClick }: ITarjeta) => {
   return (
     <>
       {noticias.map((n) => (
@@ -33,10 +31,9 @@ const Tarjeta = () => {
           <DescripcionTarjetaNoticia>
             {n.descripcionCorta}
           </DescripcionTarjetaNoticia>
-          <BotonLectura onClick={() => setModal(n)}>Ver más</BotonLectura>
+          <BotonLectura onClick={() => handelClick(n)}>Ver más</BotonLectura>
         </TarjetaNoticia>
       ))}
-       <Modal setModal={setModal} modal={modal}/>
     </>
   );
 };
